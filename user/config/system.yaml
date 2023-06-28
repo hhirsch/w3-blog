@@ -45,3 +45,8 @@ gpm:
   verify_peer: true
 session:
   enabled: false
+
+strict_mode:
+  yaml_compat: true
+  twig_compat: true
+  blueprint_compat: true

@@ -1,3 +1,26 @@
+# v0.1.10
+## 08/12/2022
+
+1. [](#new)
+    * _BREAKING CHANGE:_ More flexible fontawesome icons for footer. Please update your theme configuration file in accordance with changes mentioned under [Customizations](https://github.com/ParitoshBh/grav-coder#customizations). Refer to `icon` value. It now needs `fab` prefix. Thanks [@EpicLPer](https://github.com/EpicLPer).
+
+# v0.1.9
+## 09/23/2021
+
+1. [](#new)
+    * Add support for `rel: me`. Thanks [@Habmala](https://github.com/Habmala).
+
+# v0.1.8
+## 12/25/2020
+
+1. [](#new)
+    * Add support for Grav version `1.7.0`.
+    * Add support for loading jquery debugging. Only enabled when debugging is enabled.
+    * Add option to show login/logout link in navbar.
+    * Show tags (below categories) as part of taxonomy. Thanks [@akisys](https://github.com/akisys).
+1. [](#bugfix)
+    * Attempt to fix navigation on item detail page. Hopefully this time for good.
+
 # v0.1.7
 ## 09/09/2020
 

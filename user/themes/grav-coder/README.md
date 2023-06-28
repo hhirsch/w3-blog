@@ -1,7 +1,5 @@
 # Grav Coder
 
-[![buddy pipeline](https://app.buddy.works/paritoshbh/grav-demo/pipelines/pipeline/197829/badge.svg?token=1a6eeec7e9ee8474f8c1dfcfe952a7b1af37740c0173678dc40cdec95155e60d "buddy pipeline")](https://app.buddy.works/paritoshbh/grav-demo/pipelines/pipeline/197829)
-
 Grav Coder is a fork of [Hugo Coder](https://github.com/luizdepra/hugo-coder) and derived from customizations made to it by [Khosrow Moossavi](https://github.com/khos2ow) for his own personal website.
 
 ![Grav Coder](assets/screenshot.png)
@@ -58,6 +56,7 @@ Manually updating Grav Coder is pretty simple. Here is what you will need to do 
 * Blog item view template
 * Categories view (listing)
 * Pagination support (defaults to 10 items per page)
+* Taxonomy display support
 
 # Setup
 
@@ -117,9 +116,16 @@ There are certain sections of the theme you can customize, in order to do so,
 * Create `grav-coder.yaml` file under `/yoursite/user/config/themes` (this makes sure any configurations made to theme persist when updating the theme)
 * Within `grav-coder.yaml` file following configuration are available,
   ```
-  # Title in navigation bar
   navbar:
+    # Title in navigation bar
     title: Grav Coder
+    # Login link in navbar
+    # Note: Logout link appears automatically if enabled in following format,
+    # <FULL_NAME>, Logout or <USERNAME>, Logout (if full name isn't available)
+    auth_link:
+      enabled: false
+      login_slug: login
+      login_label: Login
 
   # Copyright text visible in footer and (start) year
   # If 'copyright_start_year' is not defined then it isn't shown
@@ -132,23 +138,29 @@ There are certain sections of the theme you can customize, in order to do so,
     github:
       title: Github
       url: <url>
-      icon: fa-github
+      icon: fab fa-github
+      rel: me (disabled by default, add to activate)
     twitter:
       title: Twitter
       url: <url>
-      icon: fa-twitter
+      icon: fab fa-twitter
+      rel: me (disabled by default, add to activate)
     linkedin:
       title: LinkedIn
       url: <url>
-      icon: fa-linkedin-in
+      icon: fab fa-linkedin-in
+      rel: me (disabled by default, add to activate)
     stackoverflow:
       title: StackOverflow
       url: <url>
-      icon: fa-stack-overflow
+      icon: fab fa-stack-overflow
+      rel: me (disabled by default, add to activate)
 
   # Navigation links (prev/next) on post page (enabled by default)
+  # Taxonomy links on post page (enabled by default)
   post:
     navigation: false
+    taxonomy: false
 
   # Pagination - number of items to show per page
   pagination:
@@ -163,7 +175,7 @@ A couple of pointers for social media icons,
     facebook:
       title: Facebook
       url: <url>
-      icon: fa-facebook-f   
+      icon: fab fa-facebook-f
    ```
 
 # Third Party Libraries Used

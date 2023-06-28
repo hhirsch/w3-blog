@@ -2,10 +2,20 @@ enabled: true
 dropdown:
   enabled: true
 navbar:
-  title: Notes on Computing
+  title: W3-NET
+  auth_link:
+    enabled: false
+    login_slug: login
+    login_label: Login
 footer:
   copyright: Henry
 post:
   navigation: true
+  taxonomy: true
+# listing_title:
+#   taxonomy:
+#     category: 'Category: '
+#     tag: 'Tag: '
+#   blogs: 'Posts'
 pagination:
   count: 10
